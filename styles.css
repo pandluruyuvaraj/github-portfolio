@@ -46,6 +46,50 @@ header nav ul li a {
     font-weight: bold;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+}
+
 .section {
     padding: 4em 0;
     text-align: center;
@@ -219,34 +263,20 @@ footer .container {
     header nav ul {
         flex-direction: column;
         align-items: center;
+        display: none;
+        width: 100%;
     }
 
     header nav ul li {
         margin: 10px 0;
     }
 
-    .about .content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .home h1 {
-        font-size: 2em;
-    }
-
-    .skills .side, .skills .middle, .skills .right {
-        width: 100%;
-        text-align: left;
-    }
-
-    .skills .row {
+    .menu-toggle {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
-    .skills .right {
-        display: block;
+    .nav-active {
+        display: flex;
     }
 }
 
