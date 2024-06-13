@@ -65,10 +65,12 @@ header nav ul li a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .home h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 0;
 }
 
@@ -80,17 +82,18 @@ header nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .about .profile-pic {
     border-radius: 50%;
     max-width: 150px;
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .projects .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
@@ -207,12 +210,68 @@ footer .container {
     background-color: #aa0ff8;
 }
 
-/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+/* Responsive styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .about .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home h1 {
+        font-size: 2em;
+    }
+
+    .skills .side, .skills .middle, .skills .right {
+        width: 100%;
+        text-align: left;
+    }
+
+    .skills .row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skills .right {
+        display: block;
+    }
+}
+
 @media (max-width: 400px) {
     .side, .middle {
         width: 100%;
     }
     .right {
         display: none;
+    }
+
+    .home h1 {
+        font-size: 1.5em;
+    }
+
+    .home p {
+        font-size: 1em;
+    }
+
+    .about .profile-pic {
+        max-width: 100px;
+        margin-bottom: 15px;
+    }
+
+    .project {
+        padding: 15px;
     }
 }
