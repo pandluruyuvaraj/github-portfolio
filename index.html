@@ -203,13 +203,29 @@
             <hr style="border:1px solid #f1f1f1">
             <h2>Contact</h2>
             <hr style="border:1px solid #f1f1f1">
-            <p>Email: <a href="mailto:pandluruyuvaraj@gmail.com">pandluruyuvaraj@gmail.com</a></p>
-            <p>Mobile No: +91 9392718529</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/pandluru-yuvaraj-9713b4259/">Pandluru Yuvaraj</a></p>
-            <!-- Add more contact methods as needed -->
         </div>
     </section>
+    <section id="contact_form" class="section-contact">
+        <div class="contact-form">
+            <form id="contactForm" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <div id="errorMessages"></div>
+        </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
