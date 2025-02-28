@@ -218,20 +218,25 @@ footer .container {
 }
 
 /* Individual bars */
-.bar-5 {
+.bar-6 {
     width: 85%;
+    height: 18px;
+    background-color: #0404e2;
+}
+.bar-5 {
+    width: 75%;
     height: 18px;
     background-color: #04AA6D;
 }
 
 .bar-4 {
-    width: 75%;
+    width: 90%;
     height: 18px;
     background-color: #2196F3;
 }
 
 .bar-3 {
-    width: 78%;
+    width: 85%;
     height: 18px;
     background-color: #00bcd4;
 }
@@ -243,13 +248,13 @@ footer .container {
 }
 
 .bar-1 {
-    width: 70%;
+    width: 80%;
     height: 18px;
     background-color: #f44336;
 }
 
 .bar-0 {
-    width: 75%;
+    width: 83%;
     height: 18px;
     background-color: #aa0ff8;
 }
